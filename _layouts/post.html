@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<div class="post">
+  <div class="post-row">
+    <div class="post-sidebar">
+      <a class="back-to-projects" href="{{site.baseurl}}/">&larr; Back to All Projects</a>
+    </div>
+    <div class="post-body">
+      <h1 class="post-title">{{ page.title }}</h1>
+    </div>
+  </div>
+  <div class="post-row">
+    <div class="post-sidebar">
+      <dl>
+        <dt>Author</dt>
+        <dd>{{ page.author }}</dd> 
+        <dt>Date</dt>
+        <dd>{{ page.date | date: "%e %B %Y" }}</dd> 
+        <dt>Topic</dt>
+        <dd>{{ page.topic }}</dd> 
+        {% if page.resources %}
+          <dt>Resources</dt>
+          <dd>
+            {% for resource in page.resources %}
+              <ul>
+                <li>
+                  <a class="resource-link" href="{% if resource.url %}{{ resource.url }}{% else if resource.file %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.title | slugify }}/{{ resource.file }}{% endif %}" title="{{ resource.name }}">{{ resource.name }}</a>
+                </li>
+              </ul>
+            {% endfor %}
+          </dd> 
+        {% endif %}
+      </dl>
+    </div>
+    <div class="post-body">
+      {{ content }}
+      <div class="post-endmark"></div>
+    </div>
+  </div>
+</div>
