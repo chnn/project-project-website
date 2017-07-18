@@ -1,4 +1,4 @@
-{% capture imagePath %}{{ page.title | slugify }}/{{ include.name }}{% endcapture %}
+{% capture imagePath %}{{ page.slug }}/{{ include.name }}{% endcapture %}
 {% if include.caption %}
 <figure>
     <img width="{% if include.width %} {{include.width}} {% else %} 500px {% endif %}" {% if include.height %} height="{{include.height}}" {% endif %} src="/assets/posts/{{ imagePath }}" {% if include.alt %} alt="{{ include.alt }}" {% endif %} {% if include.height %} height="{{ include.height }}" {% endif %}/>

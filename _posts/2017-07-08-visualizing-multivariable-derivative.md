@@ -114,7 +114,9 @@ Typically a point in the complex plane is written as $$a + bi$$ for some $$a,\ b
 
 Next up I’m planning a 3D-printable version of this same visualization.  The idea is to perform similar deformation of a lattice in $$\mathbb{R}^3$$.
 
-{% include image name="3d-lattice.jpg" width="400px" %}
+<!-- {% include image name="3d-lattice.jpg" width="400px" %} -->
+
+{% stl lattice.stl %}
 
 More on this coming soon!
 

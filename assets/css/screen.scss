@@ -8,6 +8,7 @@ $light-blue: #3498db;
 $blue: #2980b9;
 $pale-yellow: #fffdef;
 $reed-red: #870400;
+$light-gray: #ecf0f1;
 $gray: #7f8c8d;
 $black: #2c3e50;
 $light-black: #34495e;
@@ -246,6 +247,28 @@ code {
 
   .katex-display {
     margin-bottom: 2.5rem;
+  }
+
+  .stl-container {
+    width: 100%;
+    height: 400px;
+    margin: 3rem auto;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid $light-gray;
+
+    .tip {
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      background: $black;
+      padding: 10px 6px 6px 10px;
+      font-size: 1rem;
+      border-radius: 3px;
+      font-weight: bold;
+      color: white;
+      font-style: italic;
+    }
   }
 }
 
