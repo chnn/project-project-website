@@ -24,11 +24,12 @@ function initSTLContainer(container) {
 
 			scene.add(mesh);
 			container.className += " loaded";
+
+			render();
 		});
 	}
 
-	function animate() {
-		requestAnimationFrame(animate);
+	function render() {
 		renderer.render(scene, camera);
 	}
 
@@ -44,7 +45,7 @@ function initSTLContainer(container) {
 
 	camera.position.z = 1.5;
 	cameraControls.target.set(0, 0, 0);
-	cameraControls.addEventListener('change', animate);
+	cameraControls.addEventListener('change', render);
 
 	scene.add(new THREE.AmbientLight('#7f8c8d'));
 
@@ -54,5 +55,5 @@ function initSTLContainer(container) {
 	scene.add(directionalLight);
 
 	loadSTL(container.dataset.filename);
-	animate();
+	render();
 }
