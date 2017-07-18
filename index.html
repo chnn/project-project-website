@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="home">
+<div class="container home">
   <h1>Welcome to Project Project.</h1>
   <p class="blurb">This is a Reed College summer research <em>Project</em> dedicated to <em>Projecting</em> mathematical ideas into the visual realm. The team consists of Henry Blanchette, Cameron Fish, Chris Henn, Kyle Ormsby, Lana Tollas, and Jalan Ziyad.  We’ll be posting here about what we make, how we make it, and the math underlying all of it.</p>
   <h2>Projects</h2>
@@ -15,7 +15,15 @@ layout: default
   </div>
   {% endfor %}
   <h2>News</h2>
-  <p>TODO</p>
+  <table class="news">
+    {% assign sorted_news = site.news | reverse %}
+    {% for item in sorted_news %}
+      <tr>
+        <td class="date">{{ item.date | date: "%e %B %Y" }}</td>
+        <td class="text">{{ item.output }}</td>
+      </tr>
+    {% endfor %}
+  </table>
   <h2>Contact</h2>
-  <p>TODO</p>
+  <p>If you have any questions regarding Project Project, please contact Kyle Ormsby at <a href="mailto:ormsbyk@reed.edu">ormsbyk@reed.edu</a>.</p>
 </div>

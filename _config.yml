@@ -1,1 +1,5 @@
 permalink: /posts/:title
+collections:
+  news:
+    permalink: /:collection/:title
+    output: true
