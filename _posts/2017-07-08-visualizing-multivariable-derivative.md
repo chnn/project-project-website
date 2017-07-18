@@ -6,7 +6,7 @@ author_link: http://chrishenn.net
 topic: Multivariable Calculus
 resources:
   - name: Visualization
-    url: http://demo.chrishenn.net
+    file: multivariable-derivative-viz
   - name: 3D Lattice
     file: lattice.obj
 ---
