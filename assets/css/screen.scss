@@ -257,6 +257,19 @@ code {
     overflow: hidden;
     border: 1px solid $light-gray;
 
+    .loading {
+      position: absolute;
+      width: 100%;
+      top: 45%;
+      text-align: center;
+      font-style: italic;
+      color: $gray;
+    }
+
+    &.loaded .loading {
+      display: none;
+    }
+
     .tip {
       position: absolute;
       top: -4px;

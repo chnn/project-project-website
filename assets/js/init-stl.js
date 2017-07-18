@@ -23,6 +23,7 @@ function initSTLContainer(container) {
 			mesh.position.set(-pos.x, -pos.y, -pos.z);
 
 			scene.add(mesh);
+			container.className += " loaded";
 		});
 	}
 
