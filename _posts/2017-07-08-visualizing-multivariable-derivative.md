@@ -8,7 +8,7 @@ resources:
   - name: Visualization
     file: multivariable-derivative-viz
   - name: 3D Lattice
-    file: lattice.obj
+    file: lattice.stl
 ---
 
 In a first course in calculus, many students encounter a image similar to the following:
@@ -113,8 +113,6 @@ Typically a point in the complex plane is written as $$a + bi$$ for some $$a,\ b
 ## Closing thoughts
 
 Next up I’m planning a 3D-printable version of this same visualization.  The idea is to perform similar deformation of a lattice in $$\mathbb{R}^3$$.
-
-<!-- {% include image name="3d-lattice.jpg" width="400px" %} -->
 
 {% stl lattice.stl %}
 
