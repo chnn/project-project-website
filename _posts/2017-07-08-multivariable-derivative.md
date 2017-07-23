@@ -1,5 +1,5 @@
 ---
-title: Visualizing multivariable functions and their derivative
+title: 2D Vector Fields and Their Derivative
 layout: post
 author: Chris Henn
 author_link: http://chrishenn.net
