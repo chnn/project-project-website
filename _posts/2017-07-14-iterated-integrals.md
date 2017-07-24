@@ -3,6 +3,9 @@ layout: post
 title: Iterated Integrals
 author: Lana Tollas
 topic: Multivariable Calculus
+feature:
+  file: 20170714_120928_HDR.jpg
+  file_type: image
 ---
 
 What is a multiple integral? The notion itself is fairly intuitive: we stretch the notion from single variable calculus of "the area under a function's graph" to higher dimensions, resulting in the multidimensional analogue of area, volume (or hypervolume). A multiple integral is essentially a way of quantifying the spatial "footprint" that a region or the graph of a function has. It is computable by splitting the region into many smaller pieces, but there is some art to performing this dissection.
@@ -19,7 +22,7 @@ $$\mathrm{Vol}(R) = \iiint_R 1$$
 
 For example, consider the region described by $$z+\lvert y\rvert\leq \lvert\sin{x}\rvert$$. It looks like this: you can manipulate the visualization with your mouse):
 
-{% stl AbsSin.stl %}
+{% include stl name="AbsSin.stl" %}
 
 When cut such that the cross sections are in the $$xy$$- or $$xz$$-planes we get respectively pointy ellipse-like shapes or parabolic shapes. But, when sliced such that the cross sections are in the $$yz$$-plane, the entire shape becomes a union of triangles.
 
@@ -39,7 +42,7 @@ Cardboard models display the different slicing choices very nicely:
 
 The next shape is the solid that models the region under the graph of the function $$f(x,y)=6xy^2-2x^3-3y^4$$. This regions looks like this (use your mouse to manipulate the model):
 
-{% stl MonkeySaddle.stl %}
+{% include stl name="MonkeySaddle.stl" %}
 
 This shape is referred to as a “monkey saddle.” The name is a response to the classical “saddle” shape we get from a graph of $$z=x^2-y^2 $$.
 

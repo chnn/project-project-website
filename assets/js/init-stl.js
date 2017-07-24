@@ -14,7 +14,7 @@ function initSTLContainer(container) {
   renderer.setSize(container.offsetWidth, container.offsetHeight);
   renderer.setClearColor("white");
 
-  camera.position.z = 1.5;
+  camera.position.set(0, 0, 1.5);
   cameraControls.target.set(0, 0, 0);
   cameraControls.addEventListener("change", render);
 
@@ -31,10 +31,15 @@ function initSTLContainer(container) {
     geometry.computeFaceNormals();
     geometry.computeVertexNormals();
 
-    mesh.scale.set(0.013, 0.013, 0.013);
 
     var box = new THREE.Box3().setFromObject(mesh);
-    var pos = (new THREE.Vector3()).addVectors(box.min, box.max).divideScalar(2);
+    var extents = (new THREE.Vector3()).subVectors(box.max, box.min);
+    var maxExtent = Math.max(Math.abs(extents.x), Math.abs(extents.y), Math.abs(extents.z));
+
+    mesh.scale.set(1 / maxExtent, 1 / maxExtent, 1 / maxExtent);
+
+    var box2 = new THREE.Box3().setFromObject(mesh);
+    var pos = (new THREE.Vector3()).addVectors(box2.min, box2.max).divideScalar(2);
 
     mesh.position.set(-pos.x, -pos.y, -pos.z);
 

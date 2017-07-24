@@ -3,8 +3,12 @@ layout: post
 title: Green’s Theorem
 author: Cameron Fish
 topic: Multivariable Calculus
+feature:
+  file: greensdemofixed.stl
+  file_type: stl
 resources:
-  - name: 
+  - name: 3D Model
+    file: greensdemofixed.stl
 ---
 
 If you are or have been a student of mathematics, physics, or engineering, you have likely encountered the following equation:
@@ -27,7 +31,7 @@ In words, the line integral along $$C$$ of $$Pdx + Qdy$$ is equal to the double 
 
 Here's a picture of what's going on:
 
-{% stl greensdemofixed.stl %}
+{% include stl name="greensdemofixed.stl" %}
 
 <!-- [caption width = "500" caption = "You can play with this! Scroll to zoom and drag to spin."][canvasio3D width="500" height="500" border="1" borderCol="#F6F6F6" dropShadow="0" backCol="#FFFFFF" backImg="..." mouse="on" rollMode="off" rollSpeedH="0" rollSpeedV="0" objPath="<a href="http://blogs.reed.edu/projectproject/files/2017/07/greensdemofinal.obj">greensdemofinal</a>" objScale=".8" objColor="#AAAAAA"  lightSet="3" reflection="off" refVal="1" objShadow="off" floor="off" floorHeight="42" lightRotate="off" Help="off" shine="off" ] [/canvasio3D][/caption] -->
 
