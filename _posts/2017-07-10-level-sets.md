@@ -2,7 +2,7 @@
 layout: post
 title: Level Sets, the Gradient, and Gradient Flow
 author: Henry Blanchette
-topic: Multivariable Calculus
+category: Multivariable Calculus
 feature:
   file: image.jpeg0001.jpg
   file_type: image

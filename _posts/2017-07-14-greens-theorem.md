@@ -2,7 +2,7 @@
 layout: post
 title: Green’s Theorem
 author: Cameron Fish
-topic: Multivariable Calculus
+category: Multivariable Calculus
 feature:
   file: greensdemofixed.stl
   file_type: stl

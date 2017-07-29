@@ -2,7 +2,7 @@
 layout: post
 title: Iterated Integrals
 author: Lana Tollas
-topic: Multivariable Calculus
+category: Multivariable Calculus
 feature:
   file: 20170714_120928_HDR.jpg
   file_type: image

@@ -3,7 +3,7 @@ title: 2D Vector Fields and Their Derivative
 layout: post
 author: Chris Henn
 author_link: http://chrishenn.net
-topic: Multivariable Calculus
+category: Multivariable Calculus
 resources:
   - name: Visualization
     file: multivariable-derivative-viz
