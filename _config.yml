@@ -1,4 +1,5 @@
-permalink: /posts/:title
+baseurl: /~ormsbyk/projectproject
+permalink: /posts/:title.html
 collections:
   news:
     permalink: /:collection/:title
