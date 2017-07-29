@@ -14,7 +14,7 @@ This is the [Jekyll](http://jekyllrb.com/) source code for the [Project Project]
    jekyll serve
    ```
 
-3. Preview the site in your web browser at http://localhost:4000/~ormsbyk/projectproject. The site will be rebuilt as you update files. Refresh the web browser to see the changes.
+3. Preview the site in your web browser at http://localhost:4000/~ormsbyk/projectproject/. The site will be rebuilt as you update files. Refresh the web browser to see the changes.
 
 ## Deploying the site
 
