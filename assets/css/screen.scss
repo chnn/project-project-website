@@ -261,7 +261,6 @@ header {
     margin-right: 40px;
   }
 
-
   .post-body > p:last-child::after {
     content: '■';
     padding-left: 1rem;
@@ -275,6 +274,18 @@ header {
     display: block;
     margin-top: 4rem;
     margin-left: -22px;
+  }
+
+  .bio {
+    padding-top: 6rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    border-top: 1px solid lightgray;
+
+    h3 {
+      font-style: italic;
+      margin-top: 0;
+    }
   }
 }
 

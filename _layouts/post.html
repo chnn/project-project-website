@@ -26,6 +26,13 @@ layout: default
     <div class="post-body">
       <div class="byline">By {{ page.author }}</div>
       {{ content }}
+      {% for bio in site.bios %}
+        {% if bio.name == page.author %}
+          <div class="bio">
+            <h3>About the author</h3> {{ bio.content | markdownify }}
+          </div>
+        {% endif %}
+      {% endfor %}
       <a class="backto" href="{{ site.baseurl }}/">&larr; Back to Project Project Home</a>
     </div>
     <div class="sidebar">

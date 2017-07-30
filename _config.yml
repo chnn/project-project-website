@@ -4,3 +4,5 @@ collections:
   news:
     permalink: /:collection/:title
     output: true
+  bios:
+    output: false
