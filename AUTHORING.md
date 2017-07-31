@@ -32,7 +32,19 @@ $$
 because I love to practice writing integral signs.
 ```
 
-Any images, 3D objects, or other files associated with a post should be stored in the folder:
+To include images in a post, use a [Liquid](https://shopify.github.io/liquid/) include tag:
+
+```
+{% raw %}{% include image name="my-image-file.jpg" width="300px" height="400px" caption="A caption for the image." %}{% endraw %}
+```
+
+The `width`, `height`, and `caption` arguments are all optional. To include a 3D object, use the `stl` include:
+
+```
+{% raw %}{% include stl name="some-3d-object.stl" %}{% endraw %}
+```
+
+Any images, STL files, or other assets associated with a post should be stored in the folder:
 
 ```
 /assets/posts/<post slug>/
@@ -40,22 +52,9 @@ Any images, 3D objects, or other files associated with a post should be stored i
 
 For example, a post `/_posts/2017-02-03-some-post-name.md` has assets stored in the folder `/assets/posts/some-post-name`.
 
-To include images in a post, place the images in the appropriate post asset folder and use a [Liquid](https://shopify.github.io/liquid/) include tag:
-
-```
-{% raw %}{% include image name="my-image-file.jpg" width="300px" height="400px" caption="A caption for the image." %}{% endraw %}
-```
-
-The `width`, `height`, and `caption` arguments are all optional.
-
-To include a 3D object, place the STL file to the post asset directory and use the `stl` include:
-
-```
-{% raw %}{% include stl name="pointy.stl" %}{% endraw %}
-```
 
 ## Example posts
 
-Have a look at [this markdown file](https://raw.githubusercontent.com/chnn/project-project-website/master/_posts/2017-07-08-multivariable-derivative.md) which generates [this post](http://people.reed.edu/~ormsbyk/projectproject/posts/multivariable-derivative.html).
+Have a look at [this markdown file](https://raw.githubusercontent.com/chnn/project-project-website/master/_posts/2017-07-14-greens-theorem.md) which generates [this post](http://people.reed.edu/~ormsbyk/projectproject/posts/greens-theorem.html).
 
 If you'd like to preview your post as you write it, talk to Chris. He can set you up with a local version of the site that updates as you write.
