@@ -24,7 +24,7 @@ layout: default
   {% endif %}
   <div class="container below-fold">
     <div class="post-body">
-      <div class="byline">By {{ page.author }}</div>
+      <div class="byline">By {{ page.author }},&nbsp;{{ page.date | date: "%e %B %Y" }}</div>
       {{ content }}
       {% for bio in site.bios %}
         {% if bio.name == page.author %}
