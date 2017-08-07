@@ -2,7 +2,7 @@
 layout: post
 title: Stereographic Projection
 author: Henry Blanchette
-published: true
+published: false
 category: 3D Visualization
 feature:
   file: Stereographic_projection_in_3D.svg.png
