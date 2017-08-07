@@ -1,55 +1,13 @@
 ---
 layout: default
 ---
-<style type="text/css">
-  input {
-    display: none;
-    visibility: hidden;
-  }
-  label {
-    display: block;
-    /*padding: 1.0em;*/
-    margin-top: 20px;
-    padding-bottom: 50px;
-    text-align: center;
-    color: #666;
-    font-size: 20px;
-  }
-  label:hover {
-    color: #000;
-  }
-  label::before {
-    font-weight: bold;
-    font-size: 15px;
-    content: "-";
-    vertical-align: text-top;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 3px;
-    background: radial-gradient(ellipse at center, #CCC 50%, transparent 50%);
-  }
-  #expand {
-    /*height: 100%;*/
-  }
-  #toggle:checked ~ #expand {
-    height: 0%;
-  }
-  #toggle:checked ~ label::before {
-    content: "+";
-  }
-
-</style>
 <div class="container home">
   <h1>Welcome to Project Project.</h1>
   <p class="blurb">This is a Reed College summer research <em>Project</em> dedicated to <em>Projecting</em> mathematical ideas into the visual realm. The team consists of Henry Blanchette, Cameron Fish, Chris Henn, Kyle Ormsby, Lana Tollas, and Jalan Ziyad.  We’ll be posting here about what we make, how we make it, and the math underlying all of it.</p>
   <img src="{{ site.baseurl }}/assets/images/spheres.png" />
-  <!-- <h2>Topics</h2> -->
-  <input id="toggle" type="checkbox" checked>
-  <label for="toggle">Topics</label>
-  <div id="expand">
-    <div class="projects">
-      {% for category in site.categories %}
+  <h2>Topics</h2>
+  <div class="projects">
+    {% for category in site.categories %}
       <div class="topic-label">
         {{ category[0] }}
       </div>
@@ -64,8 +22,7 @@ layout: default
           </div>
         {% endfor %}
       </div>
-      {% endfor %}
-    </div>
+    {% endfor %}
   </div>
   {% if site.news.size > 0 %}
     <h2>News</h2>
