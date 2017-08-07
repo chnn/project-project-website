@@ -2,11 +2,16 @@
 layout: post
 title: Stereographic Projection
 author: Henry Blanchette
-published: false
-category: 3D Visualization
+published: true
+category: 3D Printing
 feature:
   file: Stereographic_projection_in_3D.svg.png
   file_type: image
+resources:
+  - name: Stereographic Projection Interactive Notebook
+    file: stereographic-projection.nb
+  - name: Stereographically projected circle
+    file: stereo_repaired.stl
 ---
 
 ## Introduction
