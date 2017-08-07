@@ -2,10 +2,10 @@
 layout: post
 title: Milnor Fibrations
 author: Henry Blanchette
-published: false
+published: true
 category: Milnor Fibrations
 feature:
-  file: fibrations-cool.jpg
+  file: milnor-cool-large.jpg
   file_type: image
 ---
 
