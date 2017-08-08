@@ -30,7 +30,7 @@ $$
 where $$w,n \in \mathbb{N}_+.$$ We will see the effects of the choice of these variables are later. Now, in the domain, we need to remove a special set $$V$$,
 
 $$
-V = \left\{ (z,w) \in \mathbb{S}^3 \mid f(z,w) = 0_{\mathbb{C}} \right\};
+V = \left \{ (z,w) \in \mathbb{S}^3 \mid f(z,w) = 0_{\mathbb{C}} \right \};
 $$
 
 this is just $$f^{-1}(0_{\mathbb{C}}).$$ The reason for this is explained by the next step. This whole mapping is defined by
@@ -46,13 +46,42 @@ Well, consider a point $$ \theta \in M^{-1} \subseteq \mathbb{S}^3 $$. Since $$ 
 My models are created using the following equations as basis (a summarization of the above process):
 
 $$
-M : \mathbb{S}^3 -> \mathbb{S}^1,
-M(z,w) \mapsto \frac{f}{\left | f \right |}
+M : \mathbb{S}^3 \setminus V \rightarrow \mathbb{S}^1, M(z,w) \mapsto \frac{f}{\left | f \right |}
 $$
 
-## Models
+$$
+\sigma : \mathbb{S}^3 \rightarrow \mathbb{R}^3
+$$
 
-Show off models I created, along with code and explanations for different styles of modeling.
+$$
+\Phi : \mathbb{R}^2 \times \mathbb{S}^1 \rightarrow \mathbb{R}^3, \Phi(m,n,\theta) \mapsto \sigma \circ M_{m,n}^{-1}(\theta)
+$$
+
+where $$\sigma$$ is the appropriate stereographic projection from a sphere of radius $$\epsilon$$.
+
+## Modeling
+
+Visualizing various Milnor Fibrations involved many desicions about what in the visualization you want to emphasize. The basic sort of depiction involves would be just a single fiber. My notation for referencing a single fiber will be
+
+$$
+\Phi(m,n,\theta)
+$$
+
+where $$\theta$$ is the angle of projection and $$m,n$$ are the same as in $$M$$. This is the same as the mathematical definition above. For example, the model below is $$\Phi(2,3,0)$$.
+
+{% include stl name="fiber_2-3-0.stl" %}
+
+Amazing! So what would $$\Phi(2,3,\pi/4)$$ look like?
+
+{% include stl name="fiber_2-3-pidiv4.stl" %}
+
+Alright, there's definitely a pattern going on here, which is what we should expect from the nature of the domain of $$\Phi$$'s $$\theta$$. The consistent structure in the middle section of the model is the complex singularity that we've been interested in. You may have already guessed what happens at $$\theta = \pi/2$$, and in $$\pi/2 \leq \theta \leq \pi$$. Just to confirm, here's $$\Phi(2,3,\pi/2)$$:
+
+{% include stl name="fiber_2-3-pidiv2.stl" %}
+
+As you can see, this fiber should stretch out to infinity, although I've cut it short for viisual convenience. You might have to rotate and zoom this model a bit to get a good angle.
+
+All of the above fibers have a boundry on the same knot in the middle area. In the case of $$\Phi(2,3,\pi/2)$$, it turns out in fact to be a 2-3 torus knot, the trefoil knot. Why is this? Looking back to our mathematical definitions, we can see that the fibers are in the domain of $$M$$, which is $$\mathbb{S}^3 \setminus V$$. $$V = \left \{ (z,w) \in \mathbb{S}^3 \mid f(z,w) = 0_{\mathbb{C}} \right \},$$ so 
 
 Exhibit some Mathematica code for modeling.
 
