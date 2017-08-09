@@ -33,6 +33,15 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+img {
+  transition: all 1s;
+}
+
+img:hover {
+  transform: scale(1.1,1.1);
+  transition: all 2s;
+}
+
 a {
   text-decoration: none;
   color: $light-blue;
@@ -44,6 +53,11 @@ a {
 
 p, li {
   line-height: 2.4rem;
+}
+
+.centered {
+  margin: auto;
+  text-align: center;
 }
 
 li {
@@ -84,6 +98,8 @@ header {
 
 .home {
   margin-bottom: 8rem;
+  width: 100%;
+  /*overflow-x: hidden;*/
 
   h1 {
     text-align: center;
@@ -120,21 +136,46 @@ header {
   }
 
   .topic-label {
-    margin-bottom: 2rem;
+    margin-top: 4rem;
   }
 
   .topic-posts {
+    margin: auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    /*flex-wrap: wrap;*/
+    /*justify-content: space-around;*/
+    margin-top: 1rem;
     margin-bottom: 2rem;
+    height: 200px;
+    width: 800px;
+    overflow-x: auto;
+    /*overflow-y: hidden;*/
+  }
+
+  .topic-posts::-webkit-scrollbar {
+    display: none;
   }
 
   .post-link {
-    flex: 1 0.5 50%;
-    padding: 0 4rem;
-    box-sizing: border-box;
-    min-width: 300px;
+    /*flex: 1 0.5 50%;*/
+    /*padding: 0 4rem;*/
+    /*box-sizing: border-box;*/
+    width: 200px;
+  }
+
+  .post-link-container {
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 200px;
+    transition: all 1s;
+  }
+
+  .post-link-container:hover {
+    padding-left: 40px;
+    padding-right: 40px;
+    transform: scale(1.1,1.1);
+    transition: all 2s;
   }
 
   .news {
@@ -194,8 +235,9 @@ header {
   }
 
   .post-feature {
-    width: calc(100% + 4px);
-    max-width: 1200px;
+    width: 100vw;
+    /*width: calc(100% + 4px);*/
+    /*max-width: 1200px;*/
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
