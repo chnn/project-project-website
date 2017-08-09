@@ -81,7 +81,29 @@ Alright, there's definitely a pattern going on here, which is what we should exp
 
 As you can see, this fiber should stretch out to infinity, although I've cut it short for viisual convenience. You might have to rotate and zoom this model a bit to get a good angle.
 
-All of the above fibers have a boundry on the same knot in the middle area. In the case of $$\Phi(2,3,\pi/2)$$, it turns out in fact to be a 2-3 torus knot, the trefoil knot. Why is this? Looking back to our mathematical definitions, we can see that the fibers are in the domain of $$M$$, which is $$\mathbb{S}^3 \setminus V$$. $$V = \left \{ (z,w) \in \mathbb{S}^3 \mid f(z,w) = 0_{\mathbb{C}} \right \},$$ so 
+All of the above fibers have a boundry on the same knot in the middle area. In the case of $$\Phi(2,3,\pi/2)$$, it turns out in fact to be a 2-3 torus knot, the trefoil knot. Why is this? Looking back to our mathematical definitions, we can see that the fibers are in the domain of $$M$$, which is $$\mathbb{S}^3 \setminus V$$. $$V$$ is the preimage of the singular point $$0 \in \mathbb{S}^1$$. A way to think of this is that our function "blows up" at $$V$$; it is $$\pm \infty$$ on our $$\mathbb{S}^3$$. There is a more detailed explanation of the relationship between Morse Theory and the topology of $$K$$ in Milnor's own work [Singular points of complex hypersurfaces](http://www.jstor.org/stable/j.ctt1bd6kvv), however I will only cover it briefly here.
+
+$$K$$ bounds $$\Phi(m,n,\theta)$$, and we an describe its behavior by breaking down the unit circle that is the image of $$M$$.
+
+Lemma 5.9 from Milnor states that there exists a smooth vector field $$\textbf{v}$$ on $$\mathbb{D}^3 \setminus V$$ such that the inner product
+
+$$
+\langle \textbf{v}(z), \textnormal{grad } \log f(z) \rangle
+$$
+
+is real and positive for all $$z$$ and that $$\langle \textbf{v}(z),z \rangle$$ has a positive real part. Next, consider the solutions to the differencial equation
+
+$$
+\frac{dp}{dt} = \textbf{v}(p(t))
+$$
+
+on the same $$\mathbb{D}^3 \setminus V$$. Following from 5.9, we can deduce that $$\vert f(p(t)) \vert $$ is strictly monotone. With the condition $$2\mathscr{R}\langle \frac{dp}{dt},p(t) \rangle = \frac{d\|p(t)\|^2}{dt} > 0$$, we have a guarantee that $$\|p(t)\|$$ is strictly monotone.
+
+From this, we can think about starting at a point $$z \in \mathbb{D}^3 \setminus V$$ and follow the appropriate path along $$\textbf{v}$$ away from the origin (this direction will increase $$\vert f(z) \vert$$) until we get to a point on the circle, $$z^\prime \in \mathbb{S}^3 \setminus V$$. Using the previous demonstrations, we can say that
+
+$$
+\frac{f(z^\prime)}{\vert f(z^\prime) \vert}
+$$
 
 Exhibit some Mathematica code for modeling.
 
