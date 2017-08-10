@@ -16,19 +16,21 @@ resources:
 
 ## Introduction
 
-Stereographic projection, in short, is a technique for preserving the structure of an $$(n+1)$$-dimensional set of points in a $$n$$-dimensional representation. Doing this can be extremely useful when, for example, you have some 4D surface, but you want to be able to actually see it. This comes up in my work with [Milnor Fibrations]({{ site.baseurl }}/posts/milnor-fibrations), where the fibers are in fact 4D. This article will explain how stereographic projection works in general, and at the end there are some neat, interactive examples.
+Stereographic projection, in short, is a technique for preserving the structure of a set on $$\mathbb{S}^n$$ in a $$n$$-dimensional representation.Doing this can be extremely useful when, for example, you have some 4D surface on $$\mathbb{S}^3$$, but you want to be able to actually see it. This comes up in my work with [Milnor Fibrations]({{ site.baseurl }}/posts/milnor-fibrations), where the fibers do in fact live on $$\mathbb{S}^3$$. This article will explain how stereographic projection works in general, and at the end there are some neat, interactive examples.
 
 How does this sort of projection preserve what kind of structure, and how does it work exactly? Read more to find out.
 
 ## Stereographic Projection
 
-Lets try projecting $$\mathbb{R}^2 \rightarrow \mathbb{R}^1$$, so $$n=1.$$ The key requirement for stereographic projection is that the points in your higher-dimensional space be on the surface of $$\mathbb{S}^n,$$ so in this case, the circle around the origin. It is possible to modify the location and size of $$\mathbb{S}^n,$$ but let's not worry about that right now. Comprehensively, this is a mapping $$\mathbb{S}^n \rightarrow \mathbb{R}^n$$. To project a point from this circle, say $$p,$$ down onto $$\mathbb{R}^1,$$ say $$p^\prime,$$ draw a line from the top of the circle, a point we can call $$\infty,$$ through $$p,$$ making sure to extend your line so that it passes through $$\infty,$$$$a,$$ and $$\mathbb{R}^1.$$ The point at which this line intersects $$\mathbb{R}^1$$ is $$p^\prime.$$
+First of all I want to make notation clear, for the notation of an $$n$$-sphere ($$\mathbb{S}^n$$) is a little counterintuitive. A $$n$$-sphere is a sphere in $$n-1$$ dimensions: A 1-sphere is a circle (2-dimensional), a 2-sphere is 3-dimensional, a 3-sphere is 4-dimensional, etc. Additionally, $$n$$-spheres contain only the points that are the sphere's radius away from the sphere's center, and no points in between. This contrasts $$\mathbb{S}^n$$ from a closed $$n$$-disk ($$\mathbb{D}^n$$), which contains all the points on and within the $$\mathbb{S}^n$$. Now on to projection!
 
-In the gif below, the green dot is $$p$$ and the blue dot is $$p^\prime.$$ The bar at the top indicates the $$\theta$$ along $$\mathbb{S}^n$$ that $$p$$ is. 
+Lets try projecting $$\mathbb{S}^1 \rightarrow \mathbb{R}^1$$, so $$n=1.$$. It is possible to modify the location and size of $$\mathbb{S}^n,$$ but let's not worry about that right now. To project a point $$p$$, from this circle down onto $$\mathbb{R}^1$$, draw a line from the top of the circle, a point we will call $$\infty$$, through $$p$$ making sure to extend your line so that it passes through $$\mathbb{R}^1$$. The point at which this line intersects $$\mathbb{R}^1$$ is $$p^\prime.$$
+
+In the gif below, the green dot is $$p$$ and the blue dot is $$p^\prime.$$
 
 ![](../assets/posts/stereographic-projection/stereographic2D.gif)
 
-It is hard to tell, but the frame where the green dot would be at the top of the circle is missing (intentionally). It turns out that our name for that point was appropriate; it would map to $$\pm \infty$$ on $$\mathbb{R}^1.$$ This doesn't make sense for the projection though, so one way to solve this is just to remove $$\infty$$, via the final mapping
+It is hard to tell, but the frame where the green dot would be at the top of the circle is missing (intentionally). It turns out that our name for that point was appropriate; it would map to $$\pm \infty$$ on $$\mathbb{R}^1.$$ This doesn't make sense for the projection though, so one way to solve this is just to remove $$\infty$$ from the domain, via the final mapping
 
 $$
 \mathbb{S}^n \setminus \infty \rightarrow \mathbb{R}^n
@@ -40,7 +42,7 @@ This 2D to 1D example probably seems boring, but it clearly shows the process. I
 
 ## Interactive Examples
 
-The 3D model below demonstrates a circle on $$\mathbb{S}^2$$ being mapped to $$\mathbb{R}^2$$ via stereographic projection (created by Kyle Ormsby). Note that the circle is preserved!
+The 3D model below demonstrates a circle on $$\mathbb{S}^2$$ being mapped to $$\mathbb{R}^2$$ via stereographic projection (created by Kyle Ormsby). Note that the circle is preserved (up to homeomorphism)!
 
 {% include stl name="stereo_repaired.stl" %}
 

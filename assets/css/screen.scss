@@ -33,6 +33,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+#project-italic {
+  text-shadow: -10px 15px 4px rgba(0,0,0,0.3);
+}
+
 img {
   transition: all 1s;
 }
@@ -103,7 +107,7 @@ header {
 
   h1 {
     text-align: center;
-    font-size: 4rem;
+    font-size: 6rem;
     margin-top: 8rem;
     margin-bottom: 5rem;
   }
@@ -123,7 +127,7 @@ header {
     padding-bottom: 1rem;
     margin-bottom: 4rem;
     margin-top: 5rem;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 
   .blurb {
@@ -137,29 +141,22 @@ header {
 
   .topic-label {
     margin-top: 4rem;
+    margin-bottom: 2rem;
+    font-size: 2.0rem;
   }
 
   .topic-posts {
     margin: auto;
     display: flex;
-    /*flex-wrap: wrap;*/
-    /*justify-content: space-around;*/
+    flex-wrap: wrap;
+    justify-content: space-around;
     margin-top: 1rem;
     margin-bottom: 2rem;
-    height: 200px;
-    width: 800px;
-    overflow-x: auto;
-    /*overflow-y: hidden;*/
-  }
-
-  .topic-posts::-webkit-scrollbar {
-    display: none;
+    /*height: 200px;*/
+    width: 50vw;
   }
 
   .post-link {
-    /*flex: 1 0.5 50%;*/
-    /*padding: 0 4rem;*/
-    /*box-sizing: border-box;*/
     width: 200px;
   }
 
@@ -214,18 +211,19 @@ header {
   }
 
   .title {
-    font-size: 2.4rem;
+    font-size: 2.0rem;
     max-width: 500px;
     margin: 1.5rem auto;
   }
 
   .author {
-    font-size: 2.0rem;
+    font-size: 1.5rem;
     color: $gray;
   }
 }
 
 .post {
+  margin: auto;
   margin-bottom: 10rem;
   overflow: hidden;
   
@@ -300,7 +298,12 @@ header {
 
   .post-body {
     flex: 0 1 $max-post-width;
-    margin-right: 40px;
+    /*margin-right: 40px;*/
+    width: 50vw;
+    min-width: 500px;
+    max-width: 900px;
+    margin-left: 10%;
+
   }
 
   // .post-body > p:last-child::after {
