@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fibration Modelling
+title: Fibration Fabrication
 author: Henry Blanchette
 published: true
 category: Milnor Fibrations
