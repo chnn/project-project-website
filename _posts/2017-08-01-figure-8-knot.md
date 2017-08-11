@@ -2,7 +2,7 @@
 layout: post
 title: Figure-8 Knot
 author: Henry Blanchette
-published: true
+published: false
 category: Milnor Fibrations
 ---
 feature:
