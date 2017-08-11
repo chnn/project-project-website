@@ -99,13 +99,13 @@ InitKnot[m_, n_] := Block[{u, uu, v, x, y, z, w, curves, tubes},
 
 ## Prints
 
-I have developed seven (some overlapping) methods of physically modelling combinations of the goals listed in the previous section. Each method has its strengths and weaknesses. In this section, I will explain each one and the results I've produced with it. Many of the Mathematica techniques that I use here are covered in my [3D printing article]({{ site.baseurl }}/posts/3d-modelling).
+I have developed five methods of physically modelling combinations of the goals listed in the previous section. Each method has its strengths and weaknesses. In this section, I will explain each one and the results I've produced with it. Many of the Mathematica techniques that I use here are covered in my [3D printing article]({{ site.baseurl }}/posts/3d-modelling).
 
 (pics)
 
 * **Thickened Fiber**
 
-This method is the simplest of them all. It uses the exact code from the **Program** section, with the addition of ```Extrusion->thickness``` to the ```ContourPlot3D```. The result is a clean-cut single fiber, if you have the ```PlotPoints``` high enough, that is. With lower ```PlotPoints```, Mathematica lets the boundary at _K_ get jagged.
+This method is the simplest of them all. It uses the exact code from the **Program** section, with the addition of ```Extrusion->thickness``` to the ```ContourPlot3D```. The result is a clean-cut single fiber, if you have the ```PlotPoints``` high enough, that is. With lower ```PlotPoints```, Mathematica lets the boundary at _K_ get jagged. 
 
 (pics)
 
@@ -121,19 +121,21 @@ This method is an application of the above method, but for two opposite fibers. 
 
 (pics)
 
-* **Infilled Pair with _K_ Embedded**
-
-(pics)
-
 * **Asymmetrical Fiber Pair**
+
+Rather than printing two opposite fibers, this method displays two nearby fibers, ideally where $$\theta - \theta^\prime \leq \pi/3$$. To make this method work, some of the outer-fiber has to be cut away to allow for the viewer to see inside, hence the point of having an inner fiber at all. This style of model demonstrates better than the others the fashion in which the fibers wrap around _K_.
 
 (pics)
 
 * **Thickened Fiber Pair with a _K_ removed** or "Cut the Knot"
 
+This method is very unique. It starts as what would be a Thickened Fiber Pair with _K_ embedded. Then, I used Blender to apply a boolean mesh difference between the fibers and _K_, leaving the fibers intact a distance away from their boundary at _K_.
+
 (pics)
 
 * **"Cut the Knot" with thinner _K_ Embedded**
+
+This method is an addition on the previous. Along with cutting away _K_ (modeled as a tube with radius $$r$$), I further embedded a copy of _K_ tubed with radius $$r/2$$, allowing for all three parts - the two fibers and the _K_ tube - to be free moving!
 
 (pics)
 
