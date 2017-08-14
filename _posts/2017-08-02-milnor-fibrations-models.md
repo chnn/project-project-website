@@ -2,7 +2,7 @@
 layout: post
 title: Fibration Fabrication
 author: Henry Blanchette
-published: true
+published: false
 category: Milnor Fibrations
 ---
 

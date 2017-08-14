@@ -32,7 +32,7 @@ V = \left \{ (z,w) \in \mathbb{C}^2 \mid f(z,w) = 0_{\mathbb{C}} \right \};
 $$
 
 $$
-V \supseteq K = V \cap \mathbb{S}^3
+K = V \cap \mathbb{S}^3
 $$
 
 $$V$$ is just $$f^{-1}(0_{\mathbb{C}})$$, and $$K$$ is the subset of $$V$$ that ends up in $$M$$'s domain, if it were not removed that is. Why is it removed? Let's look at how the Milnor map itself is defined:
@@ -43,7 +43,7 @@ $$
 
 Ah, $$K$$ would cause problems as when $$f=0$$, $$M$$ is undefined. So where are the 'fibers' that were mentioned in the title? And, after all, where is the visualization opportunity? It seems that $$M$$ is working with a 4D input from $$\mathbb{S}^3$$, which by itself is beyond the reach of current printing technology.
 
-Consider a point $$ \theta \in M^{-1} \subseteq \mathbb{S}^3 $$. The fibers that we want are in fact $$M^{-1}(\theta)$$. This preimage is in four dimensional $$\mathbb{S}^3, but we can use stereographic projection from $$\mathbb{S}^3 \rightarrow \mathbb{R}^3$$ to get a physical glimpse of it! Additionally, we can project $$K$$ into 3D along with the fibers. $$V$$ acts like a 'binding' for the fibered 'pages' that wrap around it. This kind of fibration is appropriately called an 'open book decomposition.'
+Consider a point $$ \theta \in M^{-1} \subseteq \mathbb{S}^3 $$. The fibers that we want are in fact $$M^{-1}(\theta)$$. This preimage is in four dimensional $$\mathbb{S}^3$$, but we can use stereographic projection from $$\mathbb{S}^3 \rightarrow \mathbb{R}^3$$ to get a physical glimpse of it! Additionally, we can project $$K$$ into 3D along with the fibers. $$V$$ acts like a 'binding' for the fibered 'pages' that wrap around it. This kind of fibration is appropriately called an 'open book decomposition.'
 
 My models are created using the following equations as basis (a summarization of the above process):
 
